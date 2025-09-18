@@ -49,7 +49,7 @@
               <h1 class="hero-content__title">На Базу —сервис для туристических баз отдыха </h1>
               <p class="hero-content__info">Управляй базой, услугами и гостями в одном приложении</p>
             </div>
-            <a class="white-btn" href="#!">Оставить заявку</a>
+            <button class="white-btn open-modal__btn" >Оставить заявку</button>
           </div>
           <div class="hero-img">
             <img class="hero-img__phone" src="images/hero-phone.png" alt="">
@@ -62,6 +62,56 @@
         </div>
       </section>
       <!-- hero end -->
+
+      <!-- situations -->
+      <section class="situations">
+        <img class="situations__line" src="images/line.svg" alt="">
+        <div class="container">
+          <div class="title-box">
+            <h2 class="title"><span>Боли и ситуации</span> к которым мы нашли решение!</h2>
+            <p class="sub-title">Мы выяснили, с какими трудностями сталкивается каждый, кто владеет туристической базой
+              отдыха</p>
+          </div>
+
+          <div class="situations__boxes">
+            <div class="boxes-left">
+              <div class="situations__box">
+                <img src="images/no-comment.svg" alt="">
+                <div class="msg-box left">
+                  <img src="images/x.svg" alt="">
+                  <p>Постоянные звонки и путаница с бронированиями</p>
+                </div>
+              </div>
+
+              <div class="situations__box">
+                <div class="msg-box right">
+                  <img src="images/x.svg" alt="">
+                  <p>Заявки на услуги теряются в мессенджерах</p>
+                </div>
+                <img src="images/social.svg" alt="">
+              </div>
+            </div>
+            <div class="boxes-right">
+              <div class="situations__box">
+                <img src="images/user.svg" alt="">
+                <div class="msg-box left">
+                  <img src="images/x.svg" alt="">
+                  <p>Нет единого канала связи с гостями</p>
+                </div>
+              </div>
+
+              <div class="situations__box">
+                <img src="images/house.svg" alt="">
+                <div class="msg-box right">
+                  <img src="images/x.svg" alt="">
+                  <p>Дополнительные услуги не продаются и не учитываются</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- situations end -->
 
       <!-- installations -->
       <section class="installations">
@@ -235,6 +285,27 @@
 
   </div>
 
+  <!-- modal -->
+  <div class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close">
+        <img src="images/close.svg" alt="">
+      </button>
+      <h2 class="modal-title">🎉 Спасибо за вашу заявку!</h2>
+      <h3 class="modal-subtitle">Вы сделали первый шаг к автоматизации вашей турбазы</h3>
+      <p class="modal-desc">Наши специалисты скоро свяжутся с вами, чтобы уточнить детали и подключить вашу базу «под
+        ключ». Мы всё сделаем за вас: добавим услуги, фото, описания и выведем вашу базу в общий агрегатор</p>
+      <div class="check-box">
+        <div class="check-box__child">
+          <img src="images/check.svg" alt="">
+        </div>
+      </div>
+      <p class="modal-bottom__info">🚀 Впереди - больше гостей, больше бронирований и полный порядок в работе персонала
+      </p>
+    </div>
+  </div>
+
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

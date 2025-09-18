@@ -186,6 +186,73 @@ body {
 }
 // hero end
 
+// situations
+.situations {
+  position: relative;
+  margin-bottom: 200px;
+  z-index: 1;
+  &__line {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .title-box {
+    max-width: 850px;
+    margin: 0 auto;
+    p {
+      max-width: 603px;
+      margin: 30px auto 0 auto;
+      line-height: 130%;
+    }
+  }
+  &__boxes {
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .boxes-left {
+    .situations__box {
+      &:last-child {
+        margin-left: 257px;
+        margin-top: 71px;
+      }
+    }
+  }
+  .boxes-right {
+    .situations__box {
+      margin-left: auto;
+      &:last-child {
+        align-items: end;
+        margin-right: 177px;
+        & > img {
+          margin-bottom: 23px;
+        }
+      }
+    }
+  }
+  &__box {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+    align-items: start;
+  }
+  .msg-box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 17px 27px;
+    max-width: 311px;
+    &.left {
+      border-radius: 35px 35px 35px 10px;
+    }
+    &.right {
+      border-radius: 35px 35px 10px 35px;
+    }
+  }
+}
+// situations end
+
 // installations
 .installations {
   background-color: #fbfbfb;
@@ -480,3 +547,77 @@ body {
   }
 }
 // contact
+
+// modal
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d0d0d66;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  display: flex;
+  &.hidden {
+    display: none;
+  }
+  &-close {
+    position: absolute;
+    top: 33px;
+    right: 33px;
+    cursor: pointer;
+  }
+  &-content {
+    background: #fff;
+    border-radius: 31px;
+    padding: 73px 130px;
+    text-align: center;
+    max-width: 1440px;
+    position: relative;
+  }
+  &-title {
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 150%;
+  }
+  &-subtitle {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 100%;
+  }
+  &-desc {
+    margin-top: 21px;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    color: #a1a1a1;
+  }
+  .check-box {
+    margin: 50px auto;
+    width: 289px;
+    height: 289px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #04c17d17;
+    border-radius: 50%;
+    &__child {
+      width: 156px;
+      border-radius: 50%;
+      height: 156px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #3cbd56;
+    }
+  }
+  &-bottom__info {
+    max-width: 684px;
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 100%;
+  }
+}
