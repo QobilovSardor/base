@@ -7,7 +7,12 @@
   <!-- font -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
-  <title>Document</title>
+  <link rel="icon" href="/images/site-icon.svg">
+  <title>На Базу.рф — сервис для туристических баз отдыха</title>
+  <meta name="description"
+    content="На Базу.рф — удобный сервис для поиска и бронирования туристических баз отдыха в России. Найдите идеальное место для отдыха и путешествий.">
+  <meta name="keywords"
+    content="На Базу, туризм, базы отдыха, отдых в России, бронирование баз, туристические базы, отдых на природе, загородные базы">
 </head>
 
 <body>
@@ -25,17 +30,20 @@
               <a class="nav__link active" href="#!">Главная</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#!">Боли и ситуации</a>
+              <a class="nav__link" href="#situations">Боли и ситуации</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#!">Про продукт</a>
+              <a class="nav__link" href="#installations">Про продукт</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#!">Возможности</a>
+              <a class="nav__link" href="#features">Возможности</a>
             </li>
           </ul>
         </nav>
-        <a class="green-btn" href="#!">Связаться</a>
+        <button class="menu-btn">
+          <img src="/images/burger.svg" alt="">
+        </button>
+        <a class="green-btn" href="#contact">Связаться</a>
       </div>
     </header>
     <!-- header end -->
@@ -49,13 +57,14 @@
               <h1 class="hero-content__title">На Базу —сервис для туристических баз отдыха </h1>
               <p class="hero-content__info">Управляй базой, услугами и гостями в одном приложении</p>
             </div>
-            <button class="white-btn open-modal__btn" >Оставить заявку</button>
+            <a class="white-btn" href="#contact">Оставить заявку</a>
           </div>
           <div class="hero-img">
             <img class="hero-img__phone" src="images/hero-phone.png" alt="">
             <div class="hero__qr">
               <img class="hero__qr-img" src="/images/qr-code.svg" alt="">
               <img class="hero__qr-arrow" src="images/arrow.svg" alt="">
+              <img class="hero__qr-arrow media" src="images/arrow-media.svg" alt="">
               <span class="hero__qr-text">Сканируй QR</span>
             </div>
           </div>
@@ -64,7 +73,7 @@
       <!-- hero end -->
 
       <!-- situations -->
-      <section class="situations">
+      <section class="situations" id="situations">
         <img class="situations__line" src="images/line.svg" alt="">
         <div class="container">
           <div class="title-box">
@@ -114,18 +123,18 @@
       <!-- situations end -->
 
       <!-- installations -->
-      <section class="installations">
+      <section class="installations" id="installations">
         <div class="container">
           <h2 class="title"><span>Никаких</span> установок и регистраций</h2>
           <p class="sub-title">Вашим гостям не нужно скачивать отдельные приложения</p>
           <div class="installations__boxes">
-            <div class="installations__box">
+            <a href="#!" class="installations__box">
               <img src="images/q.svg" alt="">
-            </div>
+            </a>
             <img class="plus-img" src="images/plus.svg" alt="">
-            <div class="installations__box">
+            <a href="https://t.me/nabazu_appbot" target="_blank" class="installations__box">
               <img src="images/tg.svg" alt="">
-            </div>
+            </a>
           </div>
           <p class="installations__info">Всё работает там, где им удобно — в Max и Telegram. <br>
             Гости просто открывают бота и сразу получают доступ к бронированию и услугам базы</p>
@@ -134,7 +143,7 @@
       <!-- installations end -->
 
       <!-- service -->
-      <section class="service">
+      <section class="service" id="service">
         <div class="container">
           <h2 class="title"><span>Как работает</span> сервис</h2>
           <div class="service__boxes">
@@ -166,23 +175,28 @@
 
             <div class="service__right-boxes">
               <div class="service__box">
-                <span class="service__box-count">01</span>
-                <h3 class="service__box-title">ШАГ <span>01</span></h3>
-                <p class="service__box-desc">Гость приезжает на базу</p>
+                <span class="service__box-count">03</span>
+                <h3 class="service__box-title">ШАГ <span>03</span></h3>
+                <p class="service__box-desc">Гость выбирает услугу и отправляет заявку</p>
                 <img class="service__box-arrow" src="images/arrow-down.svg" alt="">
-                <p class="service__box-desc">Cканирует QR-код в домике/номере или переходит по персональной ссылке,
-                  которую
-                  администратор отправляет при заселении</p>
+                <p class="service__box-desc">Она сразу попадает в рабочий чат базы, где администратор подтверждает заказ
+                  и контролирует все обращения в одном месте</p>
               </div>
               <div class="service__box">
-                <span class="service__box-count">02</span>
-                <h3 class="service__box-title">ШАГ <span>02</span></h3>
-                <p class="service__box-desc">По ссылке гость видит витрину вашей базы</p>
-                <img class="service__box-arrow" src="images/arrow-down.svg" alt="">
-                <p class="service__box-desc">Меню ресторана, аренду беседок и бань, прокат, клининг, вызов
-                  администратора и
-                  другие услуги.
-                  Всё в одном месте, удобно и понятно</p>
+                <span class="service__box-count">RESULT</span>
+                <h3 class="box-title"><span>РЕЗУЛЬТАТ</span>. Ваш гость доволен</h3>
+                <h4>А вы, как владелец, получаете:</h4>
+                <ul>
+                  <li class="service__box-desc">
+                    ❌ Никаких потерянных звонков и сообщений
+                  </li>
+                  <li class="service__box-desc">
+                    📈 Рост продаж дополнительных услуг
+                  </li>
+                  <li class="service__box-desc">
+                    ✅ Статистику , контроль и порядок в работе персонала
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -191,7 +205,7 @@
       <!-- service end -->
 
       <!-- eatures -->
-      <section class="features">
+      <section class="features" id="features">
         <div class="container">
           <h2 class="title"><span>Ключевые возможности</span></h2>
 
@@ -222,6 +236,8 @@
               <p class="features__card-desc">Брони, услуги, доходы и скорость отклика персонала собраны в одном
                 кабинете. Полная прозрачность и порядок</p>
               <img class="numbers-img" src="images/numbers.svg" alt="">
+              <img class="numbers-img media" src="images/numbers-media.svg" alt="">
+
             </div>
             <div class="features__card">
               <h3 class="features__card-title">Подключение к агрегатору турбаз России</h3>
@@ -242,7 +258,7 @@
       <!-- eatures end -->
 
       <!-- contact -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="container">
           <div class="contact__boxes">
             <div class="contact__content">
@@ -256,9 +272,9 @@
               </p>
               <div class="social-media">
                 <a class="social-media__card" href="#!">
-                  <img src="images/q.svg" alt="">
+                  <img src="images/q-small.svg" alt="">
                 </a>
-                <a class="social-media__card" href="#!">
+                <a class="social-media__card" href="https://t.me/nabazu_appbot" target="_blank">
                   <img src="images/tg.svg" alt="">
                 </a>
               </div>
@@ -272,7 +288,7 @@
               <input type="text" placeholder="Комментарий" class="contact__form-input">
               <span class="form-text">Нажимая на кнопку, вы соглашаетесь с нашими <a href="#!">правилами обработки
                   данных</a></span>
-              <button class="green-btn">
+              <button class="green-btn open-modal__btn" type="button">
                 Получить настройку под ключ
               </button>
             </form>
