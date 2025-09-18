@@ -24,7 +24,7 @@ ol {
   margin: 0;
 }
 body {
-  font-family: "Manrope";
+  font-family: "Manrope", sans-serif;
   font-weight: 400;
   color: #2a2a2a;
   font-size: 16px;
@@ -111,7 +111,7 @@ body {
     position: relative;
     background: url("../images/hero-bg.png"),
       linear-gradient(94.35deg, #4baf4f 12.77%, #008205 97.82%);
-       background-repeat: no-repeat;
+    background-repeat: no-repeat;
     padding: 70px 47px 54px 140px;
     max-width: 1720px;
     margin: 0 auto;
@@ -185,3 +185,298 @@ body {
   }
 }
 // hero end
+
+// installations
+.installations {
+  background-color: #fbfbfb;
+  padding: 108px 0;
+  &__boxes {
+    display: flex;
+    gap: 58px;
+    justify-content: center;
+    margin: 50px 0 40px 0;
+  }
+  &__box {
+    background: #fff;
+    box-shadow: 0px 0px 37.7px 0px #0000001a;
+    width: 217px;
+    height: 217px;
+    border-radius: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:first-child {
+      transform: rotate(-5.18deg);
+    }
+    &:last-child {
+      transform: rotate(5.44deg);
+    }
+  }
+  &__info {
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    max-width: 1006px;
+    margin: 0 auto;
+  }
+}
+// installations end
+
+//service
+.service {
+  padding: 153px 0 257px 0;
+  &__boxes {
+    display: flex;
+    align-items: center;
+    gap: 92px;
+    margin-top: 90px;
+  }
+  &__left-boxes,
+  &__right-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+  }
+  &__box {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: #f4faf5;
+    border-radius: 16px;
+    padding: 20px;
+    &-title {
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 100%;
+      margin-bottom: 20px;
+      span {
+        color: #4baf4f;
+      }
+    }
+    &-desc {
+      line-height: 100%;
+    }
+    &-arrow {
+      margin: 5px 0;
+    }
+    &-count {
+      position: absolute;
+      font-weight: 700;
+      font-size: 113px;
+      line-height: 100%;
+      bottom: -13px;
+      z-index: -1;
+      right: -8px;
+      color: #4baf4f0d;
+    }
+  }
+  &__phone-box {
+    position: relative;
+    min-width: 258px;
+    max-width: 258px;
+    height: 537px;
+    z-index: 1;
+    &-img {
+      width: 100%;
+      height: 100%;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 339px;
+      height: 339px;
+      border-radius: 50%;
+      border: 3px solid #4baf4f14;
+      z-index: -1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 283px;
+      height: 283px;
+      border-radius: 50%;
+      background-color: #4baf4f;
+      z-index: -1;
+    }
+  }
+}
+// service end
+
+.features {
+  margin-bottom: 340px;
+  .title {
+    margin-bottom: 92px;
+  }
+  &__cards {
+    display: grid;
+    gap: 20px;
+    &.top {
+      grid-template-columns: 827px 594px;
+    }
+    &.bottom {
+      grid-template-columns: 594px 827px;
+      margin-top: 20px;
+    }
+  }
+  &__card {
+    background-color: #4baf4f0f;
+    border-radius: 16px;
+    padding: 40px 30px 0 30px;
+    position: relative;
+    overflow: hidden;
+    min-height: 506px;
+    &:last-child {
+      .flex-box {
+        display: flex;
+        gap: 49px;
+        margin-top: 20px;
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        left: 30px;
+      }
+      .feature-phone {
+        margin: auto 0 0 auto;
+      }
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 100%;
+      margin-bottom: 10px;
+    }
+    &-desc {
+      font-size: 24px;
+      line-height: 150%;
+      width: 79%;
+    }
+    .feature-phone {
+      width: 344px;
+      box-shadow: 0px 0px 18.57px 0px #00000014;
+      margin: 30px auto 0 auto;
+      display: block;
+      border-radius: 16px 16px 0 0;
+    }
+    .notification-img {
+      width: 237px;
+      position: absolute;
+      left: 30px;
+      bottom: 43px;
+    }
+    .admin-box {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: end;
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      .admin-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        background: #4baf4f1a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .admin-name {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+      }
+    }
+    .numbers-img {
+      position: absolute;
+      bottom: -35px;
+      left: 0;
+    }
+  }
+}
+
+// contact
+.contact {
+  margin-bottom: 278px;
+  &__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    max-width: 720px;
+    &-title {
+      font-weight: 700;
+      font-size: 54px;
+      line-height: 110.00000000000001%;
+    }
+    &-desc {
+      font-size: 16px;
+      line-height: 140%;
+      color: #464646;
+      margin-top: 20px;
+    }
+    .social-media {
+      margin: 43px 0;
+      display: flex;
+      gap: 10px;
+      &__card {
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        box-shadow: 0px 0px 11.4px 0px #0000001c;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    .question-text {
+      font-weight: 700;
+      line-height: 100%;
+      color: #000000;
+    }
+  }
+  &__form {
+    max-width: 593px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    &-input {
+      width: 100%;
+      height: 63px;
+      background-color: #f7f7f7;
+      border-radius: 20px;
+      outline: none;
+      border: none;
+      font-size: 16px;
+      line-height: 100%;
+      padding: 20px 30px;
+      &::placeholder {
+        color: #9c9c9c;
+      }
+    }
+    .form-text {
+      line-height: 100%;
+      margin: 4px 0 36px 0;
+      a {
+        color: #4baf4f;
+        text-decoration: underline;
+      }
+    }
+    .green-btn {
+      height: 64px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+  }
+}
+// contact
