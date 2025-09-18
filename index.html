@@ -281,14 +281,18 @@
               <a href="#!" class="question-text">[ всё ещё сомневаешься? ]</a>
             </div>
 
-            <form class="contact__form">
-              <input type="text" placeholder="Имя" class="contact__form-input">
-              <input type="text" placeholder="Телефон" class="contact__form-input">
-              <input type="text" placeholder="Город" class="contact__form-input">
-              <input type="text" placeholder="Комментарий" class="contact__form-input">
-              <span class="form-text">Нажимая на кнопку, вы соглашаетесь с нашими <a href="#!">правилами обработки
-                  данных</a></span>
-              <button class="green-btn open-modal__btn" type="button">
+            <form class="contact__form" id="contactForm">
+              <input type="text" name="name" placeholder="Имя" class="contact__form-input" required>
+              <input type="text" name="phone" placeholder="Телефон" class="contact__form-input" required>
+              <input type="text" name="city" placeholder="Город" class="contact__form-input">
+              <input type="text" name="comment" placeholder="Комментарий" class="contact__form-input">
+
+              <span class="form-text">
+                Нажимая на кнопку, вы соглашаетесь с нашими
+                <a href="#!">правилами обработки данных</a>
+              </span>
+
+              <button class="green-btn open-modal__btn" type="submit">
                 Получить настройку под ключ
               </button>
             </form>

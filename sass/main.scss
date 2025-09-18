@@ -584,6 +584,14 @@ body {
       height: 64px;
       font-size: 18px;
       cursor: pointer;
+      &:disabled {
+        opacity: .4;
+        cursor: not-allowed;
+        &:hover {
+          background: #4baf4f;
+          color: #fff;
+        }
+      }
     }
   }
 }
@@ -621,6 +629,11 @@ body {
     opacity: 0;
     transform: scale(0.9);
     transition: all 0.3s ease-in-out;
+    max-height: calc(100vh - 50px);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     &.active {
       opacity: 1;
       transform: scale(1);
@@ -686,8 +699,8 @@ body {
   .features__cards {
     grid-template-columns: 1fr 1fr !important;
   }
-  .contact__content{
-max-width: 500px;
+  .contact__content {
+    max-width: 500px;
   }
 }
 @media (max-width: 1024px) {
@@ -801,15 +814,18 @@ max-width: 500px;
   .features__card {
     padding: 16px 24px;
   }
-  .contact__boxes{
+  .contact__boxes {
     flex-direction: column;
     gap: 30px;
   }
-  .contact__content{
+  .contact__content {
     max-width: 100%;
   }
-  .contact__form{
+  .contact__form {
     max-width: 100%;
+  }
+  .modal-title {
+    font-size: 50px;
   }
 }
 
@@ -1042,42 +1058,79 @@ max-width: 500px;
       margin-left: -10px;
     }
   }
-  .features__card:last-child .flex-box{
+  .features__card:last-child .flex-box {
     flex-direction: column;
     gap: 20px;
     position: unset;
   }
-  .features__card:last-child .feature-phone{
+  .features__card:last-child .feature-phone {
     margin: 0 auto;
   }
-  .contact__content-title{
+  .contact__content-title {
     font-size: 24px;
   }
-  .contact__content-desc{
+  .contact__content-desc {
     font-size: 13px;
   }
-  .contact__form .green-btn{
+  .contact__form .green-btn {
     padding: 15px 25px;
   }
-  .contact{
+  .contact {
     margin-bottom: 67px;
   }
-  .contact__form-input{
+  .contact__form-input {
     border-radius: 12px;
   }
-  .features{
+  .features {
     margin-bottom: 120px;
   }
-  .features .title{
+  .features .title {
     margin-bottom: 23px;
     font-size: 24px;
   }
-  .header__logo{
+  .header__logo {
     width: 141px;
     height: 47px;
-    img{
+    img {
       width: 100%;
       height: 100%;
     }
+  }
+  .modal-title {
+    font-size: 24px;
+  }
+  .modal-subtitle {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .modal-desc {
+    font-size: 14px;
+    margin-top: 16px;
+  }
+  .modal-content {
+    padding: 48px 25px 30px 25px;
+  }
+  .modal-close {
+    img {
+      width: 15px;
+    }
+  }
+  .modal .check-box {
+    width: 170px;
+    height: 170px;
+    margin: 38px auto;
+  }
+  .modal .check-box__child {
+    width: 91px;
+    height: 91px;
+    img {
+width: 38px;
+    }
+  }
+  .modal {
+    padding-inline: 16px;
+  }
+  .modal-bottom__info{
+    font-size: 14px;
   }
 }
