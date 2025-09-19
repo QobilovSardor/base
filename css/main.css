@@ -496,7 +496,7 @@ body {
 }
 
 .contact {
-  margin-bottom: 278px;
+  padding-bottom: 278px;
 }
 .contact__boxes {
   display: flex;
@@ -1048,7 +1048,7 @@ body {
     padding: 15px 25px;
   }
   .contact {
-    margin-bottom: 67px;
+    padding-bottom: 67px;
   }
   .contact__form-input {
     border-radius: 12px;

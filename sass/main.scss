@@ -510,7 +510,7 @@ body {
 
 // contact
 .contact {
-  margin-bottom: 278px;
+  padding-bottom: 278px;
   &__boxes {
     display: flex;
     justify-content: space-between;
@@ -1079,7 +1079,7 @@ body {
     padding: 15px 25px;
   }
   .contact {
-    margin-bottom: 67px;
+    padding-bottom: 67px;
   }
   .contact__form-input {
     border-radius: 12px;
