@@ -5,15 +5,38 @@ const menuBtnIcon = document.querySelector(".menu-btn img");
 const burgerIcon = "/images/burger.svg";
 const closeIcon = "/images/close.svg";
 
-menuBtn.addEventListener("click", () => {
+function toggleMenu() {
   nav.classList.toggle("active");
+  menuBtnIcon.src = nav.classList.contains("active") ? closeIcon : burgerIcon;
+}
 
-  if (nav.classList.contains("active")) {
-    menuBtnIcon.src = closeIcon;
-  } else {
-    menuBtnIcon.src = burgerIcon;
+function closeMenu() {
+  nav.classList.remove("active");
+  menuBtnIcon.src = burgerIcon;
+}
+
+menuBtn.addEventListener("click", toggleMenu);
+
+document.addEventListener("click", (e) => {
+  if (
+    nav.classList.contains("active") &&
+    !nav.contains(e.target) &&
+    !menuBtn.contains(e.target)
+  ) {
+    closeMenu();
   }
 });
+
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && nav.classList.contains("active")) {
+    closeMenu();
+  }
+});
+
 const modal = document.querySelector(".modal");
 const modalContent = document.querySelector(".modal-content");
 const openModalBtn = document.querySelector(".open-modal__btn");
@@ -43,7 +66,21 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-const inputs = contactForm.querySelectorAll("input[name]");
+// const inputs = contactForm.querySelectorAll("input[name]");
+// const checkFormValidity = () => {
+//   let isValid = true;
+//   inputs.forEach((input) => {
+//     if (!input.value.trim()) {
+//       isValid = false;
+//     }
+//   });
+//   submitBtn.disabled = !isValid;
+// };
+// faqat validatsiya uchun commentni chiqarib tashlaymiz
+const inputs = contactForm.querySelectorAll(
+  "input[name]:not([name='comment'])"
+);
+
 const checkFormValidity = () => {
   let isValid = true;
   inputs.forEach((input) => {
@@ -68,7 +105,7 @@ contactForm.addEventListener("submit", async function (e) {
     name: formData.get("name"),
     phone: formData.get("phone"),
     city: formData.get("city"),
-    comment: formData.get("comment"),
+    comment: formData.get("comment") || "",
   };
 
   try {
@@ -92,6 +129,6 @@ contactForm.addEventListener("submit", async function (e) {
       alert("❌ Ошибка: " + result.message);
     }
   } catch (err) {
-    alert("⚠️ Сеть или серверда xatolik");
+    alert("⚠️ Сеть yoki serverda xatolik");
   }
 });

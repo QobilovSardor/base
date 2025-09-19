@@ -674,6 +674,9 @@ body {
   .service__boxes {
     gap: 40px;
   }
+  .modal-content {
+    padding: 53px 130px 20px 130px;
+  }
 }
 @media (max-width: 1200px) {
   .features__cards {
